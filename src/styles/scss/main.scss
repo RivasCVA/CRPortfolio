@@ -1,0 +1,27 @@
+/**
+ * @imports only.
+ */
+
+// HELPERS
+
+@import "./helpers/queries";
+@import "./helpers/properties";
+@import "./helpers/fonts";
+
+// BASICS
+
+@import "./basics/base";
+
+// COMPONENTS
+
+@import "./components/shared";
+@import "./components/navigation";
+@import "./components/terminal";
+
+@import "./components/hero";
+@import "./components/about";
+@import "./components/resume";
+@import "./components/projects";
+@import "./components/contact";
+
+@import "./components/footer";

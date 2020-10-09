@@ -1,0 +1,18 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    color: white;
+    background-color: $hero-dark-gray-color;
+    text-align: center;
+    font-size: max(1.2rem, 12px);
+
+    a {
+        color: white;
+
+        :hover {
+            color: white;
+        }
+    }
+}

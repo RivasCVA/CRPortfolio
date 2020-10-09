@@ -1,0 +1,97 @@
+.resume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    perspective: 3500px;
+    padding: 15px 0 45px 0;
+    width: 100%;
+    background-color: lightslategray;
+    font-size: max(1rem, 8.5px);
+
+    &__title {
+        margin: 25px 0 20px 0;
+        font: 700 4em "Poppins", sans-serif;
+        color: white;
+        text-align: center;
+    }
+
+    &__content-row {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__content-column {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+    }
+}
+
+.spinning-paper {
+    $face-width: 200px;
+    $face-height: 260px;
+    $face-depth: 2px;
+
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotatePaper 20s linear infinite;
+    height: calc(#{$face-height} + 25px);
+
+    &__face {
+        position: absolute;
+        width: $face-width;
+        height: $face-height;
+        border: 0.5px solid rgb(0, 0, 0);
+
+        &--front {
+            transform: translate3d(calc(#{$face-width} / -2), 0, calc(#{$face-depth} / 2));
+            background-image: url("/src/images/resume-image.png");
+            background-size: contain;
+        }
+        &--back {
+            transform: translate3d(calc(#{$face-width} / -2), 0, calc(#{$face-depth} / -2)) rotateY(180deg);
+            background-image: url("/src/images/resume-image.png");
+            background-size: contain;
+        }
+        &--right {
+            width: $face-depth;
+            transform: translate3d(calc((#{$face-width} / 2) - (#{$face-depth} / 2)), 0, 0) rotateY(90deg);
+            background-color: black;
+        }
+        &--left {
+            width: $face-depth;
+            transform: translate3d(calc((#{$face-width} / -2) - (#{$face-depth} / 2)), 0, 0) rotateY(90deg);
+            background-color: black;
+        }
+        &--top {
+            height: $face-depth;
+            transform: translate3d(calc(#{$face-width} / -2), calc(#{$face-depth} / -2), 0) rotateX(90deg);
+            background-color: black;
+        }
+        &--bottom {
+            height: $face-depth;
+            transform: translate3d(calc(#{$face-width} / -2), calc(#{$face-height} - (#{$face-depth} / 2)), 0) rotateX(90deg);
+            background-color: black;
+        }
+    }
+
+    @keyframes rotatePaper {
+        0% {
+            transform: rotateX(10deg) rotateY(0deg);
+        }
+        25% {
+            transform: rotateX(0deg) rotateY(90deg);
+        }
+        50% {
+            transform: rotateX(-10deg) rotateY(180deg);
+        }
+        75% {
+            transform: rotateX(0deg) rotateY(270deg);
+        }
+        100% {
+            transform: rotateX(10deg) rotateY(360deg);
+        }
+    }
+}

@@ -1,0 +1,213 @@
+/**
+ NAVIGATION - Consists of two sub-compoents:
+ - NavBar: The horizontal navigation bar containing the brand and burger menu.
+ - SideNav: The slide-in side navigation that appears when the menu is clicked.
+ */
+
+// Navigation Bar
+
+.navbar {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    width: 100%;
+    background-color: $hero-background-color;
+
+    &__brand {
+        background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, $hero-gold-color, transparent, transparent);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font: 600 24px 'Poppins', sans-serif;
+
+        &:hover {
+            animation-play-state: paused;
+            text-shadow: 0 0 0 $hero-gold-color;
+            color: transparent;
+        }
+
+        @keyframes revealBrand {
+            80% { letter-spacing: 0.25px; }
+            100% { background-size: 300% 300%; }
+        }
+
+        @keyframes glowBrand {
+            40% { text-shadow: 0 0 2px $hero-gold-color; }
+        }
+    }
+
+    &__toggler {
+        transition-duration: 0.3s;
+        width: 35px;
+        height: 35px;
+        background-image: url('/src/images/icons/burger-icon.svg');
+        filter: invert(69%) sepia(91%) saturate(275%) hue-rotate(353deg) brightness(97%) contrast(95%);
+        outline: none !important;
+
+        &:hover {
+            opacity: 0.75;
+        }
+
+        @keyframes revealToggler{
+            0% {
+                opacity: 0;
+                transform: rotateZ(0deg) scale(1, 1);
+            }
+            50% {
+                transform: rotateZ(180deg) scale(1.2, 1.2);
+            }
+            100% {
+                opacity: 1;
+                transform: rotateZ(360deg) scale(1, 1);
+            }
+        }
+    }
+}
+
+// Side Navigation
+
+.sidenav {
+    position: relative;
+    z-index: 10;
+
+    &--disabled {
+        display: none;
+    }
+
+    &__overlay {
+        position: fixed;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        opacity: 0;
+        background-color: black;
+
+        &--active {
+            animation: showOverlay 325ms forwards;
+
+            @keyframes showOverlay {
+                from { opacity: 0; }
+                to { opacity: 0.5; }
+            }
+        }
+
+        &--inactive {
+            animation: hideOverlay 325ms forwards;
+
+            @keyframes hideOverlay {
+                from { opacity: 0.5; }
+                to { opacity: 0; }
+            }
+        }
+    }
+
+    &__content {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        overflow-x: hidden;
+        width: 300px;
+        height: 100%;
+        padding-top: 60px;
+        background-color: $hero-background-color;
+        border-right: 1px solid $hero-screennav-link-border;
+
+        &--active {
+            animation: moveRight 325ms forwards;
+
+            @keyframes moveRight {
+                from { left: -300px; }
+                to { left: 0; }
+            }
+        }
+
+        &--inactive {
+            animation: moveLeft 325ms forwards;
+
+            @keyframes moveLeft {
+                from { left: 0; }
+                to { left: -300px; }
+            }
+        }
+    }
+
+    &__close-btn {
+        position: absolute;
+        right: 8px;
+        top: 0;
+        transition-duration: 0.3s;
+        padding: 0;
+        color: $hero-gold-color;
+        font: 35px "Poppins", sans-serif;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.75;
+            color: $hero-gold-color;
+            text-decoration: none;
+        }
+    }
+
+    &__title {
+        margin: 0 8px;
+        color: $hero-navbar-text-color;
+        font: 600 26px "Poppins", sans-serif;
+    }
+
+    &__dent-tab {
+        margin: 5px 8px;
+    }
+
+    &__iconed-list {
+        margin: 15px 0;
+    }
+}
+
+.iconed-list {
+    &__link {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        transition-duration: 0.3s;
+        padding: 0 12px;
+        margin: 8px 10px;
+        height: 55px;
+        border-top: 1px solid $hero-gold-soft-color;
+        border-bottom: 1px solid $hero-gold-soft-color;
+        border-left: 5px solid $hero-gold-color;
+        border-right: 1px solid $hero-gold-soft-color;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        background-color: $hero-screennav-link-background;
+        color: $hero-navbar-text-color-idle;
+        text-decoration: none;
+
+        &:hover {
+            transform: translateZ(50px);
+            margin: 8px 5px;
+            color: $hero-navbar-text-color;
+            text-decoration: none;
+
+            .iconed-list__icon {
+                filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(110deg) brightness(98%) contrast(108%);
+            }
+        }
+    }
+
+    &__icon {
+        transition-duration: 0.3s;
+        width: 30px;
+        height: 30px;
+        filter: invert(90%) sepia(0%) saturate(37%) hue-rotate(256deg) brightness(86%) contrast(84%);
+
+        &::selection {
+            filter: invert(90%) sepia(0%) saturate(37%) hue-rotate(256deg) brightness(86%) contrast(84%);
+        }
+    }
+
+    &__label {
+        margin-left: 15px;
+        font: 500 18px "Poppins", sans-serif;
+    }
+}

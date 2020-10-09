@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    background-color: $hero-background-color;
+    font-size: 10px;
+
+    @include respond-below(md) {
+        font-size: 1vw;
+    }
+
+    @include respond-below(xs) {
+        font-size: 4.1px;
+    }
+
+    @include respond-below(xxs) {
+        font-size: 3.6px;
+    }
+}
+
+.scroll-disabled {
+    overflow: hidden;
+}
+
+.hide-to-animate {
+    opacity: 0;
+}

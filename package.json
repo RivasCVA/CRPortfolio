@@ -1,0 +1,38 @@
+{
+  "name": "crportfolio",
+  "version": "1.0.0",
+  "description": "Portfolio Website by Carlos Rivas",
+  "main": "scripts/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch & sass --watch src/styles/scss/main.scss:public/main.css --style compressed",
+    "build": "webpack & sass src/styles/scss/main.scss:public/main.css --style compressed"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "carlosrivas"
+  ],
+  "author": "Carlos Rivas",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.1",
+    "@typescript-eslint/eslint-plugin": "^3.8.0",
+    "@typescript-eslint/parser": "^3.8.0",
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-typescript": "^9.0.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.5",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "html-webpack-plugin": "^4.5.0",
+    "node-sass": "^4.14.1",
+    "ts-loader": "^8.0.3",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}

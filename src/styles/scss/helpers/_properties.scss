@@ -1,0 +1,20 @@
+// Color Properties
+
+$hero-background-color: #021931;
+$hero-navbar-text-color: #fff;
+$hero-navbar-text-color-idle: #bbbbbb;
+$hero-gold-color: #f2bf5e;
+$hero-gold-soft-color: #d1a552;
+$hero-screennav-link-background: #0f2c44e8;
+$hero-screennav-link-border: #475c71;
+$hero-dark-gray-color: #373737;
+$hero-dark-gray-soft-color: #464646;
+$hero-dark-gray-softer-color: #5a5a5a;
+
+$projects-background-color: #fcc661ea;
+
+// Constant Properties
+
+$max-window-width: map-get($map: $breakpoints, $key: "md");
+
+

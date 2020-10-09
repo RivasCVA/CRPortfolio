@@ -1,0 +1,41 @@
+.terminal {
+    $root: &;
+    position: fixed;
+    display: block;
+    z-index: 15;
+    top: 0;
+    padding: 1.25em 1.75em;
+    width: 100%;
+    height: 100%;
+    background-color: $hero-background-color;
+    font-size: max(1rem, 10px);
+
+    @include respond-below(xs) {
+        font-size: 2rem;
+    }
+
+    @include respond-below(xxs) {
+        font-size: 1.5rem;
+    }
+
+    &__command {
+        color: $hero-navbar-text-color;
+        text-align: left;
+        font: 2em monospace;
+    }
+
+    &__cursor {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        opacity: 0.75;
+        width: 1.15em;
+        height: 2.75em;
+        color: transparent;
+        background-color: $hero-navbar-text-color;
+
+        &--inactive {
+            opacity: 0;
+        }
+    }
+}
