@@ -1,3 +1,15 @@
+/**
+ * Neccesary references for Webpack
+ */
+import 'jquery';
+import 'bootstrap';
+import '../../styles/scss/main.scss';
+import '../../images/resume.pdf';
+import '../../images/favicon.png';
+
+/**
+ * Module imports
+ */
 import observers from './basics/observers';
 import terminal from './components/terminal';
 import hero from './components/hero';

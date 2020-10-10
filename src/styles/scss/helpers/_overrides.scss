@@ -1,0 +1,11 @@
+
+/**
+* Overriding Sass's min and max to allow the use of mixed units
+*/
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
+
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
