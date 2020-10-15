@@ -132,6 +132,7 @@
     }
 
     &:hover {
+        cursor: pointer;
         transform: scale(1.02, 1.02) translateY(-0.1cm);
         box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.25);
     }
