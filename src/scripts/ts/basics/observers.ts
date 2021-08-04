@@ -14,18 +14,6 @@ const animate = (element: HTMLElement, baseClassName: string) => {
     element.addEventListener('animationend', listener);
 };
 
-/*
-const animateSpecial = (element: HTMLElement, animationClassName: string) => {
-    element.classList.add(animationClassName);
-    const listener = () => {
-        element.classList.remove('hide-to-animate');
-        element.classList.remove(animationClassName);
-        element.removeEventListener('animationend', listener);
-    };
-    element.addEventListener('animationend', listener);
-};
-*/
-
 // MARK: - about__details
 
 const aboutDetails = $('.about__details');
