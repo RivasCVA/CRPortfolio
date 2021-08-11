@@ -30,7 +30,7 @@ enum RivasMedia {
     linkedin = 'https://www.linkedin.com/in/RivasCVA',
     twitter = 'https://twitter.com/Its_NiTEMARE',
     reddit = 'https://www.reddit.com/user/Its_NiTEMARE',
-    instagram = 'https://www.instagram.com/its_nitemare/'
+    instagram = 'https://www.instagram.com/rivascarlosva'
 }
 
 /**
