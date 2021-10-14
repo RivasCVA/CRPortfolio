@@ -78,8 +78,8 @@
         }
 
         #{$root}__back {
-            transform: translateZ(1px) rotateY(180deg);
-            z-index: 1;
+            transform: translateZ(0px) rotateY(180deg);
+            z-index: 0;
             opacity: 1;
         }
     }
@@ -142,7 +142,7 @@
         position: absolute;
         display: flex;
         flex-direction: column;
-        transform: translateZ(1px);
+        transform: translateZ(0px);
         transform-style: preserve-3d;
         transition: 
             transform var(--flip-speed) var(--flip-timing-func), 
@@ -154,7 +154,7 @@
         width: 100%;
         height: 100%;
         background-color: var(--background-color);
-        z-index: 1; 
+        z-index: 0; 
         opacity: 1;
     }
 
