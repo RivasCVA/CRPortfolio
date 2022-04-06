@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack-dev-server",
-    "build": "webpack",
-    "deploy": "aws s3 cp public s3://rivascarlosva.com --recursive"
+    "build": "rm -rf ./public && webpack",
+    "deploy": "aws s3 sync ./public s3://rivascarlosva.com --delete"
   },
   "keywords": [
     "portfolio",
