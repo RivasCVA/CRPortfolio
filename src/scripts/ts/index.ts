@@ -16,6 +16,7 @@ import hero from './components/hero';
 import navigation from './components/navigation';
 import projects from './components/projects';
 import contact from './components/contact';
+import age from './components/age';
 
 $(() => {
     // Window Setup
@@ -31,4 +32,5 @@ $(() => {
     navigation.init();
     projects.init();
     contact.init();
+    age.init();
 });

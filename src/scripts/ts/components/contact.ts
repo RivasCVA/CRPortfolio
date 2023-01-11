@@ -13,12 +13,6 @@ const githubCellLabel = $('.contact-cell--github').children('.contact-cell__labe
 const linkedinCellIcon = $('.contact-cell--linkedin').children('.contact-cell__icon');
 const linkedinCellLabel = $('.contact-cell--linkedin').children('.contact-cell__label');
 
-const twitterCellIcon = $('.contact-cell--twitter').children('.contact-cell__icon');
-const twitterCellLabel = $('.contact-cell--twitter').children('.contact-cell__label');
-
-const redditCellIcon = $('.contact-cell--reddit').children('.contact-cell__icon');
-const redditCellLabel = $('.contact-cell--reddit').children('.contact-cell__label');
-
 const instagramCellIcon = $('.contact-cell--instagram').children('.contact-cell__icon');
 const instagramCellLabel = $('.contact-cell--instagram').children('.contact-cell__label');
 
@@ -28,8 +22,6 @@ const instagramCellLabel = $('.contact-cell--instagram').children('.contact-cell
 enum RivasMedia {
     github = 'https://github.com/RivasCVA',
     linkedin = 'https://www.linkedin.com/in/RivasCVA',
-    twitter = 'https://twitter.com/Its_NiTEMARE',
-    reddit = 'https://www.reddit.com/user/Its_NiTEMARE',
     instagram = 'https://www.instagram.com/rivascarlosva'
 }
 
@@ -71,12 +63,6 @@ const setupEvents = () => {
 
     linkedinCellIcon.on('click', () => { openSocialMedia(RivasMedia.linkedin); });
     linkedinCellLabel.on('click', () => { openSocialMedia(RivasMedia.linkedin); });
-
-    twitterCellIcon.on('click', () => { openSocialMedia(RivasMedia.twitter); });
-    twitterCellLabel.on('click', () => { openSocialMedia(RivasMedia.twitter); });
-
-    redditCellIcon.on('click', () => { openSocialMedia(RivasMedia.reddit); });
-    redditCellLabel.on('click', () => { openSocialMedia(RivasMedia.reddit); });
 
     instagramCellIcon.on('click', () => { openSocialMedia(RivasMedia.instagram); });
     instagramCellLabel.on('click', () => { openSocialMedia(RivasMedia.instagram); });
