@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack-dev-server",
     "build": "rm -rf ./public && webpack",
-    "deploy": "aws s3 sync ./public s3://rivascarlosva.com --delete"
+    "deploy": "aws s3 sync ./public s3://rivascarlosva.com --delete",
+    "resume-image": "convert -density 300 -colorspace sRGB src/images/resume.pdf -alpha off -append src/images/resume-image.png"
   },
   "keywords": [
     "portfolio",
