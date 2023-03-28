@@ -2,7 +2,7 @@
  * Adjustable Properties
  */
 const toggleAnimationDuration = 1250;
-const minCards = ($(window).width() || 0) > 576 ? 8 : 4;
+const minCards = ($(window).width() || 0) > 768 ? 12 : 4;
 
 /**
  * References
